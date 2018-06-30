@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.miyo.pojo.config.bean.SystemConfigBean",
+      "name": "com.miyo.user",
+      "type": "com.miyo.pojo.config.bean.SystemConfigBean"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.miyo.pojo.config.bean.SystemConfigBean",
+      "name": "com.miyo.user.upload-dir",
+      "type": "java.lang.String"
+    }
+  ]
+}
