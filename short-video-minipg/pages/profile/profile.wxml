@@ -1,0 +1,41 @@
+<scroll-view scroll-y="{{true}}" class='main-scroll-view'>
+  <form bindsubmit='doEditUserInfo'>
+    <view class='header-menu'>
+      <view class='header-menu-title'>
+        <text>个人资料</text>
+      </view>
+      <view class='header-menu-btn'>
+        <button form-type='submit'>保存</button>
+      </view>
+    </view>
+    <view class='faceimg-view'>
+      <image wx:if="{{faceImage != ''}}" src='{{faceImage}}' bindtap='doUploadFace' binderror='handleFaceImgError'></image>
+      <image wx:else src='{{defaultFaceImag}}' bindtap='doUploadFace'></image>
+      <text  bindtap='doUploadFace'>点击更换头像</text>
+    </view>
+    <view class='input-view'>
+      <view class='input-item-view'>
+        <label>昵称</label>
+        <input class='input-item-view-input' name='' placeholder='点击添加昵称' value='{{nickname}}'></input>
+      </view>
+      <view class='input-item-view'>
+        <label>性别</label>
+        <picker value='{{index}}' range='{{sexArray}}' bindchange='selectSex'>
+          <input class='input-item-view-input' placeholder='点击选择性别' wx:if="{{index == -1}}"></input>
+          <input class='input-item-view-input' value='{{sexArray[index]}}' wx:else></input>
+        </picker>
+      </view>
+      <view class='input-item-view'>
+        <label>生日</label>
+        <picker mode="date" value="{{birthday}}" start="1900-01-01" end="2020-12-31" bindchange="selectDate">
+          <input class='input-item-view-input' placeholder='点击选择出生日期' wx:if="{{birthday == 0}}"></input>
+          <input class='input-item-view-input' value='{{birthday}}' wx:else></input>
+        </picker>
+      </view>
+      <view class='.input-item-textarea-view'>
+        <label>签名</label>
+        <textarea class='input-item-view-input' auto-height placeholder="本宝宝暂时还没有想到签名" value="{{signature}}"></textarea>
+      </view>    
+    </view>
+  </form>
+</scroll-view>  

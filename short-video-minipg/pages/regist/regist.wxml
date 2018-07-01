@@ -1,0 +1,18 @@
+<view class='headerview'>
+  <image src='../resources/pictures/101logo.jpg'></image>
+</view>
+
+<form bindsubmit='doRegist'>
+  <view class='inputview'>
+      <input name='username' placeholder='电话/邮箱'></input>
+  </view>
+  <view class='inputview'>
+      <input name='password' placeholder='密码' type='password'></input>
+  </view>
+  <view class='inputview'>
+      <input name='passwordConfirm' placeholder='密码确认' type='password'></input>
+  </view>
+  <view class='buttonview'>
+    <button class='buttonview-button' hover-class='btn-hover' form-type='submit'>注册</button>
+  </view>
+</form>

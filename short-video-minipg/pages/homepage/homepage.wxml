@@ -1,0 +1,29 @@
+<view class='headerview'>
+  <view class='image-view'>
+    <image src='{{faceImage}}' bindtap='toUserEdit'></image>
+  </view>
+  <view class='btn-view'>
+    <button>+关注</button>
+  </view>
+  <view class='nickname-view'>
+    <text>{{nickname}}</text>
+  </view>
+  <view class='line'></view>
+  <view class='personality-view'>
+    <text>{{signature}}</text>
+  </view>
+  <view class='bubble-view'>
+    <text class='bubble-view-text' decode="{{true}}">&nbsp;&nbsp;{{sex}}&nbsp;&nbsp;</text>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    <text class='bubble-view-text' decode="{{true}}">&nbsp;&nbsp;{{age}}&nbsp;&nbsp;</text>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    <text class='bubble-view-text' decode="{{true}}">&nbsp;&nbsp;{{constellation}}&nbsp;&nbsp;</text>
+  </view>
+  <view class='count-info-view'>
+    <text class='count-info-view-text'>{{likeCnt}}获赞</text>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    <text class='count-info-view-text'>{{followCnt}}关注</text>
+    <text decode="{{true}}">&nbsp;&nbsp;</text>
+    <text class='count-info-view-text'>{{fansCnt}}粉丝</text>
+  </view>
+</view>
