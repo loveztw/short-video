@@ -27,13 +27,15 @@ page {
 }
 
 .btn-view {
-  /* background: yellow; */
+  background: yellow;
   height: 250rpx;
   width: 500rpx;
+  display: flex;
 }
 
 .btn-view button {
   width: 200rpx;
+  height: 90rpx;
   color: white;
   background: #FF0058;
   margin-top: 105rpx;

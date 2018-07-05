@@ -4,6 +4,7 @@
   </view>
   <view class='btn-view'>
     <button>+关注</button>
+    <button bindtap='doPopMenu'>设置</button>
   </view>
   <view class='nickname-view'>
     <text>{{nickname}}</text>

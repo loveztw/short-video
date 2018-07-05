@@ -79,5 +79,21 @@ Page({
     wx.navigateTo({
       url: '../profile/profile',
     })
+  },
+
+  doPopMenu: function() {
+    wx.showActionSheet({
+      itemList: ['编辑资料', '设置'],
+      success: function (res) {
+        var index = res.tapIndex;
+        if (index == 0) { //编辑资料
+          wx.navigateTo({
+            url: '../profile/profile',
+          })
+        } else if (index == 1) { //设置
+
+        }
+      },
+    })
   }
 })
