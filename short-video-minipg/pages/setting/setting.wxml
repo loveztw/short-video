@@ -2,9 +2,17 @@
   <view class='header-menu'>
     <text>设置</text>
   </view>
-  <view class='account-setting'>
-    <!-- <view class='setting-item'>
+  <view class='setting-block'>
+    <view class='setting-item'>
       <text>账号</text>
-    </view> -->
+      <text>123456</text>
+    </view> 
+    <view class='setting-item'>
+      <text>密码设置</text>
+      <view class='arrow'></view>
+    </view>
   </view>
+    
+  <button class='btn'>退出登录</button>
+
 </view>
