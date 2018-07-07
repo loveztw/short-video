@@ -61,6 +61,11 @@ Page({
           wx.redirectTo({
             url: '../homepage/homepage',
           })
+        } else if (res.data.status == 500) { 
+          wx.showToast({
+            title: '系统错误',
+            icon: 'none',
+          }) 
         } else {
           wx.showToast({
             title: res.data.msg,

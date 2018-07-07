@@ -16,7 +16,7 @@
     <view class='input-view'>
       <view class='input-item-view'>
         <label>昵称</label>
-        <input class='input-item-view-input' name='' placeholder='点击添加昵称' value='{{nickname}}'></input>
+        <input class='input-item-view-input' name='nickname' placeholder='点击添加昵称' value='{{nickname}}'></input>
       </view>
       <view class='input-item-view'>
         <label>性别</label>
@@ -34,7 +34,7 @@
       </view>
       <view class='.input-item-textarea-view'>
         <label>签名</label>
-        <textarea class='input-item-view-input' auto-height placeholder="本宝宝暂时还没有想到签名" value="{{signature}}"></textarea>
+        <textarea class='input-item-view-input' name='signature' auto-height placeholder="本宝宝暂时还没有想到签名" value="{{signature}}"></textarea>
       </view>    
     </view>
   </form>
