@@ -27,7 +27,7 @@ page {
 }
 
 .btn-view {
-  background: yellow;
+  /* background: yellow; */
   height: 250rpx;
   width: 500rpx;
   display: flex;

@@ -7,7 +7,7 @@
       <text>账号</text>
       <text>123456</text>
     </view> 
-    <view class='setting-item'>
+    <view class='setting-item' bindtap='toPassReset'>
       <text>密码设置</text>
       <view class='arrow'></view>
     </view>

@@ -3,16 +3,27 @@
 </view>
 
 <form bindsubmit='doRegist'>
-  <view class='inputview'>
-      <input name='username' placeholder='电话/邮箱'></input>
-  </view>
-  <view class='inputview'>
-      <input name='password' placeholder='密码' type='password'></input>
-  </view>
+  <block wx:if="{{resetFlg == false}}">
+    <view class='inputview'>
+        <input name='username' placeholder='电话/邮箱'></input>
+    </view>
+    <view class='inputview'>
+        <input name='password' placeholder='密码' type='password'></input>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='inputview'>
+        <input name='curpassword' placeholder='当前密码'></input>
+    </view>
+    <view class='inputview'>
+        <input name='password' placeholder='新密码' type='password'></input>
+    </view>
+  </block>  
   <view class='inputview'>
       <input name='passwordConfirm' placeholder='密码确认' type='password'></input>
   </view>
   <view class='buttonview'>
-    <button class='buttonview-button' hover-class='btn-hover' form-type='submit'>注册</button>
+    <button wx:if="{{resetFlg == false}}" class='buttonview-button' hover-class='btn-hover' form-type='submit'>注册</button>
+    <button wx:else class='buttonview-button' hover-class='btn-hover' form-type='submit'>重置</button>    
   </view>
 </form>

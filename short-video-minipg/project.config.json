@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.94",
 	"appid": "wx7447cf4e683a39c6",
-	"projectname": "short-video",
+	"projectname": "short-video-develop",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

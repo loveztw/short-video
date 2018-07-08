@@ -1,6 +1,17 @@
 const app = getApp();
 
 Page({
+  data: {
+    resetFlg: false,
+  },
+
+  onLoad: function(options) {
+    var flag = options.resetFlg;
+    this.setData({
+      resetFlg: flag,
+    })
+  },
+
   doRegist: function(e) {
     var formObj = e.detail.value;
     var username = formObj.username;
