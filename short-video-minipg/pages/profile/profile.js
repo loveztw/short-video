@@ -10,13 +10,23 @@ Page({
     defaultFaceImag: '../resources/pictures/noneface.jpg',
     nickname: '',
     signature: '',
-    birthday: '0'
+    birthday: '0',
+
+    uploadFlag: false,
   },
 
   onShow: function(){
     var userInfo = app.userInfo
     if (userInfo == null) {
       return
+    }
+
+    //如果是上传头像操作，不刷新数据
+    if (this.data.uploadFlag == true) {
+      this.setData({
+        uploadFlag: false,
+      })
+      return;
     }
 
     if (userInfo.faceImage != null && userInfo.faceImage != '') {
@@ -69,6 +79,10 @@ Page({
 
   doUploadFace:function(){
     var that = this
+    this.setData({
+      uploadFlag: true,
+    })
+
     wx.chooseImage({
       count: 1,
       success: function (res) {
@@ -137,6 +151,7 @@ Page({
   doEditUserInfo: function(e){
     var sexIndex = this.data.index + 1
     var birthday = (this.data.birthday == '0') ? null : this.data.birthday
+    var formObj = e.detail.value;
 
     wx.showLoading({
       title: '处理中',
@@ -148,12 +163,12 @@ Page({
         id: app.userInfo.id,
         sex: sexIndex,
         faceImage: this.data.dbFaceImagePath,
-        nickname: this.data.nickname,
+        nickname: formObj.nickname,
         birthday: birthday,
-        signature: this.data.signature
+        signature: formObj.signature
       },
       header: {
-        'content-type': 'application/json' //默认值
+        'content-type': 'application/json;charset=utf-8'
       },
       success: function (res) {
         wx.hideLoading();
