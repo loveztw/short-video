@@ -15,3 +15,4 @@
 </form>
 
 <view class='regist-view' bindtap='goToRegistPage'>用户注册</view>
+<view class='regist-view' bindtap='goToIndex'>返回</view>

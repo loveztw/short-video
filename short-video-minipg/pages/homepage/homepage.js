@@ -16,6 +16,9 @@ Page({
   onShow: function () {
     var userInfo = app.userInfo
     if (userInfo == null) {
+      wx.reLaunch({
+        url: '../login/login',
+      })
       return
     }
 
@@ -87,11 +90,13 @@ Page({
       success: function (res) {
         var index = res.tapIndex;
         if (index == 0) { //编辑资料
-          wx.navigateTo({
+          wx.reLaunch({
             url: '../profile/profile',
           })
         } else if (index == 1) { //设置
-
+          wx.reLaunch({
+            url: '../setting/setting',
+          })
         }
       },
     })

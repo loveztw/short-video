@@ -26,7 +26,7 @@
         "selectedIconPath": "pages/resources/pictures/video-select.png"
       },
       {
-        "pagePath": "pages/login/login",
+        "pagePath": "pages/setting/setting",
         "text": "上传",
         "iconPath": "pages/resources/pictures/add.png",
         "selectedIconPath": "pages/resources/pictures/add-select.png"

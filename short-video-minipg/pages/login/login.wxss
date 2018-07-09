@@ -46,7 +46,7 @@ page {
   height: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 100rpx;
+  margin-top: 50rpx;
   color: blue;
   text-decoration: underline;
 }

@@ -7,6 +7,12 @@ Page({
     })
   },
 
+  goToIndex: function() {
+    wx.reLaunch({
+      url: '../index/index',
+    })
+  },
+
   doLogin: function(e) {
     var formObj = e.detail.value;
     var username = formObj.username;
@@ -58,7 +64,9 @@ Page({
           })
           
           app.userInfo = res.data.data
-          wx.redirectTo({
+          wx.setStorageSync('user', app.userInfo)
+
+          wx.reLaunch({
             url: '../homepage/homepage',
           })
         } else if (res.data.status == 500) { 

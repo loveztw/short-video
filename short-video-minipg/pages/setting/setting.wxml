@@ -13,6 +13,6 @@
     </view>
   </view>
     
-  <button class='btn'>退出登录</button>
+  <button class='btn' bindtap='doLogoff'>退出登录</button>
 
 </view>
