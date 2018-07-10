@@ -1,1 +1,15 @@
-
+<view class='container'>
+  <camera class='camera-view' device-position="back">
+    <cover-view class='header-view'>
+      <cover-view class='side-item-view' bindtap='toIndex'>
+        <cover-image class='close-img' src='../resources/pictures/close.png'></cover-image>
+        </cover-view>
+      <cover-view class='middle-item-view'>
+        <cover-view class='item-view-text'>选择音乐</cover-view>
+      </cover-view>
+      <cover-view class='side-item-view'>
+        <cover-image class='reverse-img' src='../resources/pictures/reverse.png'></cover-image>
+      </cover-view>
+    </cover-view>
+  </camera>
+</view>
