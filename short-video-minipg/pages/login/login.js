@@ -1,6 +1,7 @@
 const app = getApp();
 
 Page({
+
   goToRegistPage: function() {
     wx.navigateTo({
       url: '../regist/regist',

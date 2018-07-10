@@ -10,15 +10,32 @@ Page({
     fansCnt: '0',
     sex: '性别未设置',
     constellation: '星座未设置',
-    age: '年龄未设置'
+    age: '年龄未设置',
+    navigateFlg: false,
   },
 
   onShow: function () {
     var userInfo = app.userInfo
     if (userInfo == null) {
-      wx.reLaunch({
-        url: '../login/login',
-      })
+      if (this.data.navigateFlg == false) {
+        this.setData({
+          navigateFlg: true,
+        })
+
+        setTimeout(function(){
+          wx.navigateTo({
+            url: '../login/login',
+          })
+        },500)
+      } else {
+        this.setData({
+          navigateFlg: false,
+        })
+
+        wx.switchTab({
+          url: '../index/index',
+        })
+      }
       return
     }
 
@@ -90,11 +107,11 @@ Page({
       success: function (res) {
         var index = res.tapIndex;
         if (index == 0) { //编辑资料
-          wx.reLaunch({
+          wx.navigateTo({
             url: '../profile/profile',
           })
         } else if (index == 1) { //设置
-          wx.reLaunch({
+          wx.navigateTo({
             url: '../setting/setting',
           })
         }

@@ -5,7 +5,8 @@
     "pages/homepage/homepage",
     "pages/login/login",
     "pages/profile/profile",
-    "pages/regist/regist"
+    "pages/regist/regist",
+    "pages/upload/upload"
 
   ],
   "window":{
@@ -26,7 +27,7 @@
         "selectedIconPath": "pages/resources/pictures/video-select.png"
       },
       {
-        "pagePath": "pages/setting/setting",
+        "pagePath": "pages/upload/upload",
         "text": "上传",
         "iconPath": "pages/resources/pictures/add.png",
         "selectedIconPath": "pages/resources/pictures/add-select.png"
