@@ -1,5 +1,5 @@
 <view class='container'>
-  <camera class='camera-view' device-position="back">
+  <camera class='camera-view' device-position="{{devicePosOpts[devicePosIndex]}}">
     <cover-view class='header-view'>
       <cover-view class='side-item-view' bindtap='toIndex'>
         <cover-image class='close-img' src='../resources/pictures/close.png'></cover-image>
@@ -8,8 +8,20 @@
         <cover-view class='item-view-text'>选择音乐</cover-view>
       </cover-view>
       <cover-view class='side-item-view'>
-        <cover-image class='reverse-img' src='../resources/pictures/reverse.png'></cover-image>
+        <cover-image class='reverse-img' src='../resources/pictures/reverse.png' bindtap='doReverse'></cover-image>
+      </cover-view>
+    </cover-view>
+    <cover-view class='no-use-view'></cover-view>
+    <cover-view class='bottom-view'>
+      <cover-view class='bottom-side-item-view'></cover-view>
+      <cover-view class='bottom-middle-item-view'>
+        <cover-view wx:if="{{recordFlg==false}}" class='start-btn-view' bindtap='startRecord'></cover-view>
+        <cover-view wx:else class='end-btn-view' bindtap='endRecord'></cover-view>
+      </cover-view>
+      <cover-view class='bottom-side-item-view'>
+        <cover-image class='reverse-img' src='../resources/pictures/add-select.png'></cover-image>
       </cover-view>
     </cover-view>
   </camera>
+  <progress></progress>
 </view>

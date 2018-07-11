@@ -50,3 +50,51 @@
   width: 58rpx;
   height: 58rpx;
 }
+
+.bottom-view {
+  /* background: yellow;  */
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-side-item-view {
+    /* background: red;   */
+  width: 300rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-middle-item-view {
+     /* background: green;    */
+  width: 150rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-use-view {
+  /* background: blue;  */
+  width: 100%;
+  height: 750rpx;
+}
+
+.start-btn-view {
+  background: #FF0058;
+  height: 150rpx;
+  width: 150rpx;
+  border: 0 solid #ff0000;
+  border-radius: 100rpx; 
+}
+
+.end-btn-view {
+  background: #FF0058;
+  height: 120rpx;
+  width: 120rpx;
+  border: 0 solid #ff0000;
+  /* border-radius: 100rpx;  */
+}
