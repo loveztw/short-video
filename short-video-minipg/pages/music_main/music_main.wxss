@@ -1,0 +1,105 @@
+.container {
+  /* position: fixed; */
+  background: red;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.searchbar-container {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar-view {
+  background: #E6E6E6;
+  width: 90%;
+  height: 100%;
+  border-radius: 40rpx;
+  display: flex;
+}
+
+.search-img-view {
+  /* background: yellow; */
+  height: 100%;
+  width: 100rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-img-view image {
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.search-input-view {
+  /* background: blue; */
+  height: 100%;
+  width: 100%;
+}
+
+.search-input-view input {
+  margin-left: 20rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-view {
+   /* background: yellow;  */
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item-view {
+  /* background: red;  */
+  width: 120rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.menu-item-view image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.menu-item-view text {
+  font-size: 34rpx;
+}
+
+.list-view {
+  background: yellow;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+}
+
+.list-view-header {
+  /* background: green; */
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.list-view-header-item {
+  background: green; 
+  height: 100rpx;
+  width: 250rpx;
+  display: flex;
+  justify-content: space-around;
+}
