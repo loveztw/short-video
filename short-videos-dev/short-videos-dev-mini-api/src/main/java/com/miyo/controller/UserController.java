@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.miyo.pojo.User;
-import com.miyo.pojo.config.bean.SystemConfigBean;
+import com.miyo.pojo.config.bean.SystemUserConfigBean;
 import com.miyo.pojo.vo.UserVO;
 import com.miyo.service.UserService;
 import com.miyo.utils.JsonResponse;
@@ -31,7 +31,7 @@ import io.swagger.annotations.ApiOperation;
 public class UserController extends BasicController {
 
 	@Autowired
-	private SystemConfigBean systemConfigBean; 
+	private SystemUserConfigBean systemUserConfigBean; 
 	
 	@Autowired
 	private UserService userService;
@@ -57,8 +57,8 @@ public class UserController extends BasicController {
 			return JsonResponse.errorMsg("请传入正确的user-id");
 		}
 				
-		String BaseDir = systemConfigBean.getUploadDir();
-		String relativeFacePath = "/" + userId + "/face";
+		String BaseDir = systemUserConfigBean.getUploadDir();
+		String relativeFacePath = "/user/" + userId + "/face";
 		String serverPath = relativeFacePath + "/" + inputFile;
 		File file = new File(BaseDir + relativeFacePath);
 		if (!file.isDirectory()) {

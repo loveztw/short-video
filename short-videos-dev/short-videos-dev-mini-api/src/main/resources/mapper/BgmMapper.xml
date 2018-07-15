@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.miyo.mapper.BgmMapper" >
+  <resultMap id="BaseResultMap" type="com.miyo.pojo.Bgm" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="author" property="author" jdbcType="VARCHAR" />
+    <result column="poster" property="poster" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="ref_cnt" property="refCnt" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <resultMap id="TypeJoinResultMap" type="com.miyo.pojo.vo.BgmVO" extends="BaseResultMap" >
+    <!--
+      //为了表关联查询增加的map
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="type_name" property="typeName" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="queryBgmByType" resultMap="TypeJoinResultMap" parameterType="com.miyo.pojo.vo.BgmVO">
+  	SELECT
+  		b.id,
+  		b.name,
+  		b.author,
+  		b.poster,
+  		b.url,
+  		b.type,
+  		b.ref_cnt,
+  		t.type_name
+  	FROM
+  		bgm as b
+  	LEFT JOIN
+  		bgm_type as t
+  	ON
+  		b.type = t.id
+  	WHERE
+  		1 = 1
+  		<if test="type != null">AND b.type = #{type} </if>
+  </select>
+</mapper>

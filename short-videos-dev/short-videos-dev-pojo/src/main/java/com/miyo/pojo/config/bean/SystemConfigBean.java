@@ -5,16 +5,18 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@ConfigurationProperties(prefix="com.miyo.user")
+@ConfigurationProperties(prefix="com.miyo.sys")
 @PropertySource("classpath:system.properties")
 public class SystemConfigBean {
-	private String uploadDir;
+	private int bgmPageSize;
 
-	public String getUploadDir() {
-		return uploadDir;
+	public int getBgmPageSize() {
+		return bgmPageSize;
 	}
 
-	public void setUploadDir(String uploadDir) {
-		this.uploadDir = uploadDir;
+	public void setBgmPageSize(int bgmPageSize) {
+		this.bgmPageSize = bgmPageSize;
 	}
+
+
 }

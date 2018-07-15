@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/music_main/music_main",
-    "pages/index/index",        
+    "pages/index/index",  
     "pages/setting/setting",      
     "pages/homepage/homepage",
     "pages/login/login",

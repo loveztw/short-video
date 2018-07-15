@@ -34,7 +34,7 @@ public class User {
     private Integer age;
 
     @Column(name = "constellation_id")
-    private String constellationId;
+    private Integer constellationId;
 
     /**
      * @return id
@@ -207,14 +207,14 @@ public class User {
     /**
      * @return constellation_id
      */
-    public String getConstellationId() {
+    public Integer getConstellationId() {
         return constellationId;
     }
 
     /**
      * @param constellationId
      */
-    public void setConstellationId(String constellationId) {
+    public void setConstellationId(Integer constellationId) {
         this.constellationId = constellationId;
     }
 }

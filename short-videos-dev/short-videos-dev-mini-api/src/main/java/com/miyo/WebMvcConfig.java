@@ -5,17 +5,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import com.miyo.pojo.config.bean.SystemConfigBean;
+import com.miyo.pojo.config.bean.SystemUserConfigBean;
 
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
 	@Autowired
-	private SystemConfigBean systemConfigBean;
+	private SystemUserConfigBean systemUserConfigBean;
 	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		String userUploadDir = "file:" + systemConfigBean.getUploadDir() + "/";
+		String userUploadDir = "file:" + systemUserConfigBean.getUploadDir() + "/";
 		registry.addResourceHandler("/**")
 				.addResourceLocations(userUploadDir)
 				.addResourceLocations("classpath:/META-INF/resources/");

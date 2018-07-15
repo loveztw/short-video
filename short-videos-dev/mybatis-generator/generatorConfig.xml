@@ -13,7 +13,7 @@
         </plugin>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.233.131:3306/short_videos"
+                        connectionURL="jdbc:mysql://192.168.236.128:3306/short_videos"
                         userId="root"
                         password="mysql">
         </jdbcConnection>
@@ -31,6 +31,7 @@
 
 		<table tableName="user"></table>
 		<table tableName="constellation"></table>
+		<table tableName="bgm"></table>
 		 
     </context>
 </generatorConfiguration>

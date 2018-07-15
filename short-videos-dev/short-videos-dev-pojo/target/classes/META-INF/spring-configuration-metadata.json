@@ -3,13 +3,23 @@
   "groups": [
     {
       "sourceType": "com.miyo.pojo.config.bean.SystemConfigBean",
-      "name": "com.miyo.user",
+      "name": "com.miyo.sys",
       "type": "com.miyo.pojo.config.bean.SystemConfigBean"
+    },
+    {
+      "sourceType": "com.miyo.pojo.config.bean.SystemUserConfigBean",
+      "name": "com.miyo.user",
+      "type": "com.miyo.pojo.config.bean.SystemUserConfigBean"
     }
   ],
   "properties": [
     {
       "sourceType": "com.miyo.pojo.config.bean.SystemConfigBean",
+      "name": "com.miyo.sys.bgm-page-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.miyo.pojo.config.bean.SystemUserConfigBean",
       "name": "com.miyo.user.upload-dir",
       "type": "java.lang.String"
     }
