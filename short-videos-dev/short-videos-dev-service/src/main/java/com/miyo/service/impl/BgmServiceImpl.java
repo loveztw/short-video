@@ -27,12 +27,32 @@ public class BgmServiceImpl implements BgmService {
 	@Autowired
 	private SystemConfigBean systemConfigBean; 
 	
+	
+	private List<BgmVO> setBgmVOUrl(List<BgmVO> bgmVOList) {
+		for (BgmVO bgmVO : bgmVOList) {
+			String dbUrl = bgmVO.getUrl();
+			String servUrl = "/bgm" + dbUrl;
+			bgmVO.setUrl(servUrl);
+		}
+		return bgmVOList;
+	}
+	
+	private List<Bgm> setBgmUrl(List<Bgm> bgmList) {
+		for (Bgm bgm : bgmList) {
+			String dbUrl = bgm.getUrl();
+			String servUrl = "/bgm" + dbUrl;
+			bgm.setUrl(servUrl);
+		}
+		return bgmList;
+	}
+	
 	@Override
 	@Transactional(propagation = Propagation.SUPPORTS)
 	public List<BgmVO> getBgmByType(int type) {
 		BgmVO bgm = new BgmVO();
 		bgm.setType(type);
-		return bmgMapper.queryBgmByType(bgm);
+		List<BgmVO> list = bmgMapper.queryBgmByType(bgm);
+		return setBgmVOUrl(list);
 	}
 	
 	@Override
@@ -42,6 +62,7 @@ public class BgmServiceImpl implements BgmService {
 		Example bgmExample = new Example(Bgm.class);
 		bgmExample.setOrderByClause("ref_cnt DESC");
 		List<Bgm> bgmList = bmgMapper.selectByExample(bgmExample);
+		bgmList = setBgmUrl(bgmList);
 		
 		PageInfo<Bgm> pageList = new PageInfo<>(bgmList);
 		
