@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.miyo.pojo.vo.BgmVO;
@@ -28,8 +28,8 @@ public class bgmController {
 		return JsonResponse.ok(bgmVOList);
 	}
 
-	@PostMapping("/listPage")
-	public JsonResponse getBgmListPage(@RequestBody Integer page) {
+	@PostMapping(value="/listPage")
+	public JsonResponse getBgmListPage(@RequestParam Integer page) {
 		
 		PagedResult pagedResult = bgmService.getBgmByPage(page);
 		return JsonResponse.ok(pagedResult);

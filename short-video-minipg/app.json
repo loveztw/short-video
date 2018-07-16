@@ -41,5 +41,7 @@
       }
     ]
   },
-  "debug": true
+  "debug": true,
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
 }
